@@ -49,13 +49,58 @@
     </header>
     <!-- Seção do Banner -->
     <section class="banner">
-        <img src="img/banner-capa.jpg" alt="Banner de Troca de Livros">
+        <img src="img/Shelfshare a troca de livros ficou mais fácil (5).png" alt="Banner de Troca de Livros">
         <div class="banner-content">
-        <h1>Bem-vindo ao nosso site de trocas de livros!</h1>
-        <p>Explore, troque e compartilhe livros com a nossa comunidade.</p>
-        </div>
+            <!-- Segunda parte: Título (h1) -->
+            <section>
+                <h1>Shelfshare: a troca de livros ficou mais fácil</h1>
+            </section>
 
+            <!-- Terceira parte: Parágrafo -->
+            <section>
+                <p>Troque conhecimento, compartilhe histórias</p>
+            </section>
+
+            <!-- Quarta parte: Ícone de localização, caixa de pesquisa, botão -->
+            <section class="pesquisa-container">
+                <div class="item-icone">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+                        <path d="M12 6a4 4 0 1 0-8 0 4 4 0 0 0 8 0zM8 0a6 6 0 0 1 6 6c0 5-6 10-6 10S2 11 2 6a6 6 0 0 1 6-6z"/>
+                        <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"/>
+                    </svg>
+                </div>
+                <!-- Caixa de pesquisa com integração da API -->
+                <div class="item-input">
+                    <input type="text" id="searchQuery" placeholder="Busque um livro">
+                </div>
+                <div class="item-botao">
+                    <button onclick="searchBook()">Pesquisar</button>
+                </div>
+            </section>          
+        </div>    
     </section>
+    <!-- Modal de Localização -->
+    <div id="modal-localizacao" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="imagem_modal">
+                <img src="img/localização.png" alt="localização">
+            </div>
+            <p>Onde você quer trocar seus livros?</p>
+            <input type="text" id="cep" placeholder="Digite sua cidade, estado ou CEP" class="input-localizacao">
+            <button class="btn-localizacao" onclick="buscarCEP()">Buscar</button>
+            <div id="container-resultado-cep" class="container-resultado">
+                <div id="resultado-cep" class="endereco" onclick="adicionarEndereco()">
+                    <i class="fa fa-map-marker-alt"></i> 
+                    <span id="endereco-completo"></span>
+                </div>
+            </div>
+            <div id="lista-cep" class="container-lista">
+                <ul id="lista-enderecos"></ul>
+            </div>
+        </div>
+    </div>
+
     <!-- Quinta parte: Duas imagens grandes lado a lado -->
     <section class="imagens-grandes">
         <div class="imagem-grande">
@@ -139,7 +184,8 @@
                 <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0L11.5 7.5a.5.5 0 0 1 0 .707l-6.146 6.146a.5.5 0 0 1-.708-.707L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
             </svg>
         </button>
-    </section>    
+    </section>   
+     
    
    
     
